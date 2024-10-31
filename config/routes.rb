@@ -1,23 +1,22 @@
 Rails.application.routes.draw do
+  # Páginas estáticas
+  get "welcome", to: "static_pages#welcome"
+  get "about", to: "static_pages#about"
   get "training_sessions/index"
   get "training_sessions/new"
   get "training_sessions/create"
   get "training_sessions/edit"
   get "training_sessions/update"
   get "training_sessions/destroy"
-  devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+  devise_for :users, controllers: { sessions: 'sessions', registrations: 'registrations' }
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Render dynamic PWA files from app/views/pwa/*
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
-  # Defines the root path route ("/")
   root "training_sessions#index"
-  resources :training_session
+  resources :training_sessions
 
 end

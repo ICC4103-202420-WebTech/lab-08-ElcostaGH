@@ -16,7 +16,7 @@ class TrainingSessionsController < ApplicationController
     if @training_session.save
       redirect_to training_sessions_path, notice: 'Training session was successfully created.'
     else
-      render :new
+      render :new, alert: 'Error creating training session.'
     end
   end
 
@@ -24,11 +24,15 @@ class TrainingSessionsController < ApplicationController
   
   end
 
+  def show
+  
+  end
+
   def update
     if @training_session.update(training_session_params)
       redirect_to training_sessions_path, notice: 'Training session was successfully updated.'
     else
-      render :edit
+      render :edit, alert: 'Error updating training session.'
     end
   end
 
