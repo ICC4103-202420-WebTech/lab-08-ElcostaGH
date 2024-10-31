@@ -1,0 +1,31 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+body {
+    background-color: #b1b1b1;
+  }
+  
+  h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #c5d2e0;
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-custom {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-custom:hover {
+    background-color: #0056b3;
+  }
