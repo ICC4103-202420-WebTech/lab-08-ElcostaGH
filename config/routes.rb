@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get "welcome", to: "static_pages#welcome"
-  get "about", to: "static_pages#about"
   get "training_sessions/index"
   get "training_sessions/new"
   get "training_sessions/create"

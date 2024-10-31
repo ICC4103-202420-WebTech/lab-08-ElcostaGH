@@ -1,2 +1,30 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+body {
+    background-color: #abcce9; /* Celeste claro */
+  }
+  
+  h1 {
+    color: #007bff; /* Color celeste */
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .container {
+    max-width: 600px; /* Ancho máximo para formularios */
+    margin: auto; /* Centrar el contenedor */
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem; /* Espaciado entre campos */
+  }
+  
+  .btn-custom {
+    background-color: #007bff; /* Color celeste */
+    color: white;
+  }
+  
+  .btn-custom:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+  }
