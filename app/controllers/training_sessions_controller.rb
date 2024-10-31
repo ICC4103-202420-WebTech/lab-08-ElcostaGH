@@ -25,7 +25,7 @@ class TrainingSessionsController < ApplicationController
   end
 
   def show
-  
+    @training_session = current_user.training_sessions.find(params[:id])
   end
 
   def update
@@ -37,6 +37,7 @@ class TrainingSessionsController < ApplicationController
   end
 
   def destroy
+    @training_session = current_user.training_sessions.find(params[:id])
     @training_session.destroy
     redirect_to training_sessions_path, notice: 'Training session was successfully deleted.'
   end

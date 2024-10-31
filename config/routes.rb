@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # Páginas estáticas
   get "welcome", to: "static_pages#welcome"
   get "about", to: "static_pages#about"
   get "training_sessions/index"
@@ -9,7 +8,7 @@ Rails.application.routes.draw do
   get "training_sessions/update"
   get "training_sessions/destroy"
   
-  devise_for :users, controllers: { sessions: 'sessions', registrations: 'registrations' }
+  devise_for :users
 
   get "up" => "rails/health#show", as: :rails_health_check
 
