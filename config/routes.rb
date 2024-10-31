@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get "training_sessions/index"
+  get "training_sessions/new"
+  get "training_sessions/create"
+  get "training_sessions/edit"
+  get "training_sessions/update"
+  get "training_sessions/destroy"
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -11,5 +17,7 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Defines the root path route ("/")
-  root to: "home#index"
+  root "training_sessions#index"
+  resources :training_session
+
 end
