@@ -2,6 +2,5 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
-import 'jquery';
-import 'bootstrap';
-import '../stylesheets/application';
+
+
